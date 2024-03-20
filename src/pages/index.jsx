@@ -12,7 +12,7 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/full.png'
+import logoAirbnb from '@/images/logos/full.svg'
 import logoFacebook from '@/images/logos/dank2.jpeg'
 import logoPlanetaria from '@/images/logos/if.png'
 import logoStarbucks from '@/images/logos/dank2.jpeg'
@@ -94,7 +94,6 @@ function Article({ article }) {
         {formatDate(article.date)}
       </Card.Eyebrow>
       <Card.Description>{article.description}</Card.Description>
-
     </Card>
   )
 }
@@ -115,11 +114,11 @@ function Newsletter() {
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Mantenha-se atualizado
-</span>
+        <span className="ml-3">Mantenha-se atualizado</span>
       </h2>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-      Seja notificado quando eu publicar algo novo e cancele a inscrição a qualquer momento.
+        Seja notificado quando eu publicar algo novo e cancele a inscrição a
+        qualquer momento.
       </p>
       <div className="mt-6 flex">
         <input
@@ -179,7 +178,12 @@ function Resume() {
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
             <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image src={role.logo} alt="" className="h-7 w-7 rounded-full" unoptimized />
+              <Image
+                src={role.logo}
+                alt=""
+                className="h-7 w-7 rounded-full"
+                unoptimized
+              />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Company</dt>
@@ -248,9 +252,7 @@ export default function Home({ articles }) {
   return (
     <>
       <Head>
-        <title>
-          Brendo Rutherles - Portfolio
-        </title>
+        <title>Brendo Rutherles - Portfolio</title>
         <meta
           name="description"
           content="Full Stack Developer apaixonado por criar soluções web inovadoras.
