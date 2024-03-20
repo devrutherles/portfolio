@@ -5,11 +5,12 @@ import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import logoAnimaginary from '@/images/logos/animaginary.svg'
 import logoCosmos from '@/images/logos/cosmos.svg'
+import close from '@/images/logos/close.svg'
 import logoHelioStream from '@/images/logos/helio-stream.svg'
 import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 import { useEffect, useState } from 'react'
-import Show from '../components/show'
+import Show from '../../components/show'
 const projects = [
   {
     name: 'Recife Tec',
@@ -69,14 +70,7 @@ export default function Projects() {
             onClick={() => changeCurrent('')}
             className=" fixed  right-4 top-4 "
           >
-            <Image
-              src={
-                'https://cdn.icon-icons.com/icons2/1154/PNG/512/1486564399-close_81512.png'
-              }
-              alt=""
-              width={32}
-              height={32}
-            />
+            <Image src={close} alt="" width={32} height={32} />
           </button>
 
           <Show data={current} />
@@ -100,7 +94,7 @@ export default function Projects() {
                   <Image
                     src={project.logo}
                     alt=""
-                    className="h-8 w-8"
+                    className="h-10 w-10"
                     unoptimized
                   />
                 </div>

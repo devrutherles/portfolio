@@ -12,10 +12,10 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/full.svg'
-import logoFacebook from '@/images/logos/dank2.jpeg'
-import logoPlanetaria from '@/images/logos/if.png'
-import logoStarbucks from '@/images/logos/dank2.jpeg'
+import logoAirbnb from '@/images/logos/rock.svg'
+import logoFacebook from '@/images/logos/danki.svg'
+import logoPlanetaria from '@/images/logos/if.svg'
+import logoStarbucks from '@/images/logos/danki.svg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -87,9 +87,7 @@ function ArrowDownIcon(props) {
 function Article({ article }) {
   return (
     <Card as="article">
-      <Card.Title href={`/articles/${article.slug}`}>
-        {article.title}
-      </Card.Title>
+      <Card.Title href={''}>{article.title}</Card.Title>
       <Card.Eyebrow as="time" dateTime={article.date} decorate>
         {formatDate(article.date)}
       </Card.Eyebrow>
@@ -114,7 +112,7 @@ function Newsletter() {
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Mantenha-se atualizado</span>
+        <span className="ml-3">Me siga!</span>
       </h2>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
         Seja notificado quando eu publicar algo novo e cancele a inscrição a
@@ -129,7 +127,7 @@ function Newsletter() {
           className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
         />
         <Button type="submit" className="ml-4 flex-none">
-          Juntar-se
+          Seguir
         </Button>
       </div>
     </form>
@@ -139,26 +137,27 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
-      company: 'Ciência da computação',
+      company: 'Ciências da computação',
       title: 'IF Sertão',
       logo: logoPlanetaria,
       start: '2017',
       end: '2021',
     },
     {
-      company: 'Rocketseat',
-      title: 'Formação Full-Stack',
-      logo: logoAirbnb,
-      start: '2018',
-      end: '2020',
-    },
-    {
       company: 'Danki Code',
       title: 'Formação PHP',
       logo: logoFacebook,
-      start: '2017',
-      end: '2017',
+      start: '2019',
+      end: '2020',
     },
+    {
+      company: 'Rocketseat',
+      title: 'Formação Full-Stack',
+      logo: logoAirbnb,
+      start: '2019',
+      end: '2021',
+    },
+
     {
       company: 'Danki Code',
       title: 'Python do Zero ao Pro',
@@ -177,11 +176,11 @@ function Resume() {
       <ol className="mt-6 space-y-4">
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
-            <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+            <div className="min-h-48px relative z-10 flex max-h-[48px] min-w-[48px] max-w-[48px] items-center justify-center rounded-full bg-white   shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <Image
                 src={role.logo}
                 alt=""
-                className="h-7 w-7 rounded-full"
+                className="h-[42px]  w-[42px]"
                 unoptimized
               />
             </div>
@@ -252,7 +251,7 @@ export default function Home({ articles }) {
   return (
     <>
       <Head>
-        <title>Brendo Rutherles - Portfolio</title>
+        <title>Brendo Rutherles - Portfólio</title>
         <meta
           name="description"
           content="Full Stack Developer apaixonado por criar soluções web inovadoras.
@@ -263,7 +262,7 @@ export default function Home({ articles }) {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Desenvolvedor Full Stack, soluções web e moobile.
+            Desenvolvedor Full Stack, soluções web e mobile.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             Full Stack Developer apaixonado por criar soluções web inovadoras.
@@ -273,22 +272,17 @@ export default function Home({ articles }) {
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
-              href="https://twitter.com"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            />
-            <SocialLink
-              href="https://instagram.com"
+              href="https://www.instagram.com/rutherles/"
               aria-label="Follow on Instagram"
               icon={InstagramIcon}
             />
             <SocialLink
-              href="https://github.com"
+              href="https://github.com/devrutherles"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
             <SocialLink
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/brendo-rutherles-de-souza-aa418615b/?originalSubdomain=pa"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />

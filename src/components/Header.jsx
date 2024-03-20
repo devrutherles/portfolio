@@ -121,12 +121,13 @@ function MobileNavigation(props) {
             </div>
             <nav className="mt-6">
               <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
-                <MobileNavItem href="/about">Sobre min</MobileNavItem>
-                <MobileNavItem href="/articles">Experiências</MobileNavItem>
-                <MobileNavItem href="/projects">Projetos</MobileNavItem>
-                {//<MobileNavItem href="/speaking">Speaking</MobileNavItem>
+                <MobileNavItem href="/sobre">Sobre min</MobileNavItem>
+                <MobileNavItem href="/experiencias">Experiências</MobileNavItem>
+                <MobileNavItem href="/projetos">Projetos</MobileNavItem>
+                {
+                  //<MobileNavItem href="/speaking">Speaking</MobileNavItem>
                 }
-                <MobileNavItem href="/uses">Stacks</MobileNavItem>
+                <MobileNavItem href="/stacks">Stacks</MobileNavItem>
               </ul>
             </nav>
           </Popover.Panel>
@@ -161,14 +162,15 @@ function NavItem({ href, children }) {
 
 function DesktopNavigation(props) {
   return (
-    <nav  {...props}>
-      <ul className="flex rounded-full !w-max bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
-        <NavItem href="/about">Sobre min</NavItem>
-        <NavItem href="/articles">Experiências</NavItem>
-        <NavItem href="/projects">Projetos</NavItem>
-        {//<NavItem href="/speaking">Speaking</NavItem>
+    <nav {...props}>
+      <ul className="flex !w-max rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+        <NavItem href="/sobre">Sobre min</NavItem>
+        <NavItem href="/experiencias">Experiências</NavItem>
+        <NavItem href="/projetos">Projetos</NavItem>
+        {
+          //<NavItem href="/speaking">Speaking</NavItem>
         }
-        <NavItem href="/uses">Stacks</NavItem>
+        <NavItem href="/stacks">Stacks</NavItem>
       </ul>
     </nav>
   )
