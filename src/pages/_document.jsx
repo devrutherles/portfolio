@@ -37,9 +37,8 @@ const modeScript = `
 
 export default function Document() {
   return (
-<Html className="h-full antialiased" lang="pt-BR">
-
-<Head>
+    <Html className="h-full antialiased" lang="pt-BR">
+      <Head>
         <script dangerouslySetInnerHTML={{ __html: modeScript }} />
         <link
           rel="alternate"
