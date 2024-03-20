@@ -8,41 +8,35 @@ import logoCosmos from '@/images/logos/cosmos.svg'
 import logoHelioStream from '@/images/logos/helio-stream.svg'
 import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
-
+import { useEffect, useState } from 'react'
+import Show from '../components/show'
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'Recife Tec',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
+      'Um e-commerce completo, totalmente responsivo, com duas aplicações: Admin e cliente, feitos em nextJS. \n Versão demonstrativa',
+    link: { href: 'https://shop-noce.vercel.app/', label: 'Abrir' },
     logo: logoPlanetaria,
   },
   {
-    name: 'Animaginary',
+    name: 'Fair price',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
+      'Uma plataforma de intermediação de serviços entre pintores e clientes, com 3 aplicações: Admin, cliente e profissional, todas feitas em nextJS. \n Versão demonstrativa*',
+    link: { href: 'https://fairprice-beta.vercel.app/', label: 'Abrir' },
     logo: logoAnimaginary,
   },
   {
-    name: 'HelioStream',
+    name: 'Super Pão cliente',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
+      'Uma plataforma de marketplace para padarias e delicatessens, com 4 aplicações:\n Admim, feito em php e laravel.\n Cliente, feito em Javascript e ReactJS.\n Lojista, feito com php e laravel.\n Entregador, feito em Javascript e ReactJS. \n Versão demonstrativa ',
+    link: { href: 'https://superpao.online/', label: 'Abrir' },
+    logo: logoOpenShuttle,
   },
   {
-    name: 'cosmOS',
+    name: 'Super Pão lojista',
     description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
+      'Uma plataforma de marketplace para padarias e delicatessens, com 4 aplicações:\n Admim, feito em php e laravel.\n Cliente, feito em Javascript e ReactJS.\n Lojista, feito com php e laravel.\n Entregador, feito em Javascript e ReactJS. \n Versão demonstrativa ',
+    link: { href: 'https://painel.superpao.online/', label: 'Abrir' },
     logo: logoOpenShuttle,
   },
 ]
@@ -59,42 +53,63 @@ function LinkIcon(props) {
 }
 
 export default function Projects() {
+  const [current, setCurrent] = useState('')
+  const changeCurrent = (data) => {
+    setCurrent(data)
+  }
   return (
     <>
       <Head>
-        <title>Projects - Spencer Sharp</title>
-        <meta
-          name="description"
-          content="Things I’ve made trying to put my dent in the universe."
-        />
+        <title>Projetos</title>
+        <meta name="description" content="As últimas coisas que desenvolvi.." />
       </Head>
+      {current && (
+        <div className=" fixed top-0 z-[999] h-[100%] w-[100%] bg-black bg-opacity-50   px-[10%] py-[5%] ">
+          <button
+            onClick={() => changeCurrent('')}
+            className=" fixed  right-4 top-4 "
+          >
+            <img
+              src={
+                'https://cdn.icon-icons.com/icons2/1154/PNG/512/1486564399-close_81512.png'
+              }
+              alt=""
+              width={32}
+              height={32}
+            />
+          </button>
+
+          <Show data={current} />
+        </div>
+      )}
       <SimpleLayout
-        title="Things I’ve made trying to put my dent in the universe."
-        intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+        title="Meus projetos."
+        intro="Trabalhei em diversos projetos, aqui estão alguns que desenvolvi."
       >
         <ul
           role="list"
           className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
         >
           {projects.map((project) => (
-            <Card as="li" key={project.name}>
-              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                <Image
-                  src={project.logo}
-                  alt=""
-                  className="h-8 w-8"
-                  unoptimized
-                />
-              </div>
-              <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                <Card.Link href={project.link.href}>{project.name}</Card.Link>
-              </h2>
-              <Card.Description>{project.description}</Card.Description>
-              <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
-                <LinkIcon className="h-6 w-6 flex-none" />
-                <span className="ml-2">{project.link.label}</span>
-              </p>
-            </Card>
+            <div onClick={() => changeCurrent(project.link.href)}>
+              <Card as="li" key={project.name}>
+                <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                  <Image
+                    src={project.logo}
+                    alt=""
+                    className="h-8 w-8"
+                    unoptimized
+                  />
+                </div>
+                <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                  <Card.Link href={''}>{project.name}</Card.Link>
+                </h2>
+                <Card.Description>{project.description}</Card.Description>
+                <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+                  <span className="ml-2">{project.link.label}</span>
+                </p>
+              </Card>
+            </div>
           ))}
         </ul>
       </SimpleLayout>

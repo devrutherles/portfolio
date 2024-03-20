@@ -5,6 +5,7 @@ import { Header } from '@/components/Header'
 
 import '@/styles/tailwind.css'
 import 'focus-visible'
+import WhatsApp from '@/components/Whats'
 
 function usePrevious(value) {
   let ref = useRef()
@@ -31,6 +32,7 @@ export default function App({ Component, pageProps, router }) {
         <main>
           <Component previousPathname={previousPathname} {...pageProps} />
         </main>
+        <WhatsApp />
         <Footer />
       </div>
     </>
