@@ -7,7 +7,7 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 function ToolsSection({ children, ...props }) {
   return (
     <Section {...props}>
-      <ul role="list" className="space-y-16">
+      <ul role="list" className="space-y-10 ">
         {children}
       </ul>
     </Section>
@@ -29,87 +29,386 @@ export default function Uses() {
   return (
     <>
       <Head>
-        <title>Uses - Spencer Sharp</title>
+        <title>Stacks</title>
         <meta
           name="description"
-          content="Software I use, gadgets I love, and other things I recommend."
+          content="Minhas habilidades e ferramentas que eu uso."
         />
       </Head>
       <SimpleLayout
-        title="Software I use, gadgets I love, and other things I recommend."
-        intro="I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I’m being productive when I’m really just procrastinating. Here’s a big list of all of my favorite stuff."
+        title="Minhas habilidades e algumas ferramentas que uso."
+        intro="Explore um pouco do meu potencial, das ferramentas que utilizo e de como posso contribuir com sua ideia."
       >
         <div className="space-y-20">
-          <ToolsSection title="Workstation">
-            <Tool title="16” MacBook Pro, M1 Max, 64GB RAM (2021)">
-              I was using an Intel-based 16” MacBook Pro prior to this and the
-              difference is night and day. I’ve never heard the fans turn on a
-              single time, even under the incredibly heavy loads I put it
-              through with our various launch simulations.
+          <ToolsSection title="Front-End">
+            <Tool title="JavaScript">
+              Com mais de 5 anos de experiência em JavaScript e frameworks
+              front-end, possuo expertise em criar interfaces interativas e
+              responsivas para web, utilizando tecnologias modernas como:
+              <p
+                style={{
+                  paddingTop: '15px',
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                ReactJS
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                React Native
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                NextJS
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                VueJS
+              </p>
             </Tool>
-            <Tool title="Apple Pro Display XDR (Standard Glass)">
-              The only display on the market if you want something HiDPI and
-              bigger than 27”. When you’re working at planetary scale, every
-              pixel you can get counts.
+            <Tool title="Estilizadores">
+              Tenho ampla experiência em estilizadores de código mais utilizados
+              do mercado como:
+              <p
+                style={{
+                  paddingTop: '15px',
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                Bootstrap
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                SaaS
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                LESS
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                Tailwind CSS
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                Styled Components
+              </p>
             </Tool>
-            <Tool title="IBM Model M SSK Industrial Keyboard">
-              They don’t make keyboards the way they used to. I buy these any
-              time I see them go up for sale and keep them in storage in case I
-              need parts or need to retire my main.
-            </Tool>
-            <Tool title="Apple Magic Trackpad">
-              Something about all the gestures makes me feel like a wizard with
-              special powers. I really like feeling like a wizard with special
-              powers.
-            </Tool>
-            <Tool title="Herman Miller Aeron Chair">
-              If I’m going to slouch in the worst ergonomic position imaginable
-              all day, I might as well do it in an expensive chair.
+            <Tool title="UI/UX Design">
+              Tenho habilidades de design para promover uma experiência de
+              usuário mais agradável e interativa, com ferramentas como:
+              <p
+                style={{
+                  paddingTop: '15px',
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                Figma
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                Sketch
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                Adobe Photoshop
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                CorelDRAW
+              </p>
             </Tool>
           </ToolsSection>
-          <ToolsSection title="Development tools">
-            <Tool title="Sublime Text 4">
-              I don’t care if it’s missing all of the fancy IDE features
-              everyone else relies on, Sublime Text is still the best text
-              editor ever made.
+          <ToolsSection title="Back-End">
+            <Tool title="NodeJS">
+              Com mais de 5 anos de experiência em Node.js e desenvolvimento
+              back-end, possuo expertise em construir sistemas escaláveis,
+              eficientes e robustos, utilizando tecnologias modernas como:
+              <p
+                style={{
+                  paddingTop: '15px',
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                Express.js para desenvolvimento de APIs robustas;
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                MongoDB e Mongoose para gerenciamento de dados;
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                JWT e OAuth para autenticação e autorização seguras;
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                Jest e Mocha para testes automatizados.
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                Servidor Nginx para hospedagem e gerenciamento de aplicações
+                Node.js.
+              </p>
             </Tool>
-            <Tool title="iTerm2">
-              I’m honestly not even sure what features I get with this that
-              aren’t just part of the macOS Terminal but it’s what I use.
+            <Tool title="PHP">
+              Domino também o PHP, como alternativa ou suporte para a solidez da
+              aplicação, com ferramentas como:
+              <p
+                style={{
+                  paddingTop: '15px',
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                Laravel para desenvolvimento de aplicações web dinâmicas;{' '}
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                MySQL e PostgreSQL para gerenciamento eficiente de bancos de
+                dados;
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                Autenticação e autorização utilizando JWT e OAuth;
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                PHPUnit e Codeception para testes automatizados e garantia de
+                qualidade.
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                Servidor Apache para hospedagem e gerenciamento de aplicações
+                PHP.
+              </p>
             </Tool>
-            <Tool title="TablePlus">
-              Great software for working with databases. Has saved me from
-              building about a thousand admin interfaces for my various projects
-              over the years.
+            <Tool title="Ferramentas adicionais">
+              Além de tudo, possuo outros conhecimentos que podem suprir ainda
+              mais as necessidades do projeto, tais como:
+              <p
+                style={{
+                  paddingTop: '15px',
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                Cloud Computing: Amazon Web Services (AWS) para hospedagem
+                escalável e serviços de computação em nuvem. Microsoft Azure
+                para implementação e gerenciamento de aplicativos na nuvem.
+                Google Cloud Platform (GCP) para serviços de armazenamento,
+                análise de dados e computação em nuvem.
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                Containers e Orquestração: Docker para criar, implantar e
+                executar aplicativos em contêineres isolados. Kubernetes para
+                orquestração de contêineres e gerenciamento de implantações em
+                escala.
+              </p>
             </Tool>
           </ToolsSection>
-          <ToolsSection title="Design">
-            <Tool title="Figma">
-              We started using Figma as just a design tool but now it’s become
-              our virtual whiteboard for the entire company. Never would have
-              expected the collaboration features to be the real hook.
+
+          <ToolsSection title="Ferramentas">
+            <Tool title="Desenvolvimento colaborativo">
+              Tenho facilidade em me integrar em equipes e trabalhar com
+              versionamento de código e ferramentas de planejamento como:
+              <p
+                style={{
+                  paddingTop: '15px',
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                Git, GitHub e GitLab para controle de versão e colaboração em
+                equipe.{' '}
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                Trello e Jira para gestão de projetos
+              </p>
             </Tool>
-          </ToolsSection>
-          <ToolsSection title="Productivity">
-            <Tool title="Alfred">
-              It’s not the newest kid on the block but it’s still the fastest.
-              The Sublime Text of the application launcher world.
-            </Tool>
-            <Tool title="Reflect">
-              Using a daily notes system instead of trying to keep things
-              organized by topics has been super powerful for me. And with
-              Reflect, it’s still easy for me to keep all of that stuff
-              discoverable by topic even though all of my writing happens in the
-              daily note.
-            </Tool>
-            <Tool title="SavvyCal">
-              Great tool for scheduling meetings while protecting my calendar
-              and making sure I still have lots of time for deep work during the
-              week.
-            </Tool>
-            <Tool title="Focus">
-              Simple tool for blocking distracting websites when I need to just
-              do the work and get some momentum going.
+            <Tool title="Desenvolvimento">
+              Costumo utilizar no meu dia a dia:
+              <p
+                style={{
+                  paddingTop: '15px',
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                Visual Studio Code, com também GitHub WorkSpaces ou IDEs
+                self-Hosted
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                Android Studio para depuração de aplicações android
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                XCode para depuração de aplicações IOS
+              </p>
+              <p
+                style={{
+                  display: 'list-item',
+                  listStyle: 'disc',
+                  listStylePosition: 'inside',
+                  paddingLeft: '15px',
+                }}
+              >
+                Postman e Insomnia para testes de API e integração de serviços.
+              </p>
             </Tool>
           </ToolsSection>
         </div>

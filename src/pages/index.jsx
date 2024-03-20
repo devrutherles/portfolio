@@ -12,10 +12,10 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+import logoAirbnb from '@/images/logos/full.svg'
+import logoFacebook from '@/images/logos/dank2.jpeg'
+import logoPlanetaria from '@/images/logos/if.png'
+import logoStarbucks from '@/images/logos/dank2.jpeg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -94,7 +94,6 @@ function Article({ article }) {
         {formatDate(article.date)}
       </Card.Eyebrow>
       <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
     </Card>
   )
 }
@@ -115,21 +114,22 @@ function Newsletter() {
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Stay up to date</span>
+        <span className="ml-3">Mantenha-se atualizado</span>
       </h2>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        Get notified when I publish something new, and unsubscribe at any time.
+        Seja notificado quando eu publicar algo novo e cancele a inscrição a
+        qualquer momento.
       </p>
       <div className="mt-6 flex">
         <input
           type="email"
-          placeholder="Email address"
+          placeholder="Endereço de email"
           aria-label="Email address"
           required
           className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
         />
         <Button type="submit" className="ml-4 flex-none">
-          Join
+          Juntar-se
         </Button>
       </div>
     </form>
@@ -139,35 +139,32 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
+      company: 'Ciência da computação',
+      title: 'IF Sertão',
       logo: logoPlanetaria,
-      start: '2019',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
-      },
+      start: '2017',
+      end: '2021',
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
+      company: 'Rocketseat',
+      title: 'Formação Full-Stack',
       logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
+      start: '2018',
+      end: '2020',
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
+      company: 'Danki Code',
+      title: 'Formação PHP',
       logo: logoFacebook,
-      start: '2011',
-      end: '2014',
+      start: '2017',
+      end: '2017',
     },
     {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
+      company: 'Danki Code',
+      title: 'Python do Zero ao Pro',
       logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      start: '2022',
+      end: '2023',
     },
   ]
 
@@ -175,13 +172,18 @@ function Resume() {
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Work</span>
+        <span className="ml-3">Educação</span>
       </h2>
       <ol className="mt-6 space-y-4">
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
             <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+              <Image
+                src={role.logo}
+                alt=""
+                className="h-7 w-7 rounded-full"
+                unoptimized
+              />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Company</dt>
@@ -250,24 +252,24 @@ export default function Home({ articles }) {
   return (
     <>
       <Head>
-        <title>
-          Spencer Sharp - Software designer, founder, and amateur astronaut
-        </title>
+        <title>Brendo Rutherles - Portfolio</title>
         <meta
           name="description"
-          content="I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
+          content="Full Stack Developer apaixonado por criar soluções web inovadoras.
+          Domínio em tecnologias como HTML, CSS, JavaScript, Node.js, Python e
+          SQL. Explore meu portf."
         />
       </Head>
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Software designer, founder, and amateur astronaut.
+            Desenvolvedor Full Stack, soluções web e moobile.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            Full Stack Developer apaixonado por criar soluções web inovadoras.
+            Domínio em tecnologias como HTML, CSS, JavaScript, Node.js, Python e
+            SQL. Explore meu portfólio e veja meu trabalho transformando ideias
+            em realidade digital.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
