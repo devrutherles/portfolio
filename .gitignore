@@ -20,6 +20,9 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+/node_modules
+node_modules/
 node_modules
-.next/
 /.next
+.next/
+
