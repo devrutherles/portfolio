@@ -4,6 +4,7 @@ import Link from 'next/link'
 import styles from '@/styles/whats.module.css'
 export default function WhatsApp() {
   return (
+
     <div className={styles.card}>
       <Link href={'https://wa.link/1z1sdk'} className={styles.social_link4}>
         <svg
@@ -18,5 +19,6 @@ export default function WhatsApp() {
         </svg>
       </Link>
     </div>
+
   )
 }
