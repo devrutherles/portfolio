@@ -69,7 +69,7 @@ export default function Projects() {
             onClick={() => changeCurrent('')}
             className=" fixed  right-4 top-4 "
           >
-            <img
+            <Image
               src={
                 'https://cdn.icon-icons.com/icons2/1154/PNG/512/1486564399-close_81512.png'
               }
