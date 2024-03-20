@@ -65,7 +65,7 @@ export default function Projects() {
         <meta name="description" content="As últimas coisas que desenvolvi.." />
       </Head>
       {current && (
-        <div className=" fixed top-0 z-[999] h-[100%] w-[100%] bg-black bg-opacity-50   px-[10%] py-[5%] ">
+        <div className=" fixed top-0 z-[999] h-[100%] w-[100%] bg-black bg-opacity-50  py-[5%]  sm:px-[5%+] md:px-[10%] ">
           <button
             onClick={() => changeCurrent('')}
             className=" fixed  right-4 top-4 "
